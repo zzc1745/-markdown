@@ -15,11 +15,12 @@
    * 备注全部文件   git commit .
    * 退出备注界面   ESC ==> :wq   或者  ESC ==> ZZ			 
 9. 忽略某个文件
-   * 创建指定文件     tonch .gitignore
+   * 创建指定文件   tonch .gitignore
    * 在 .gitignore 文件中输入想要忽略的文件名、文件夹名
      书写格式:
 	 index.html  （单个文件）
 	 \aaa        （文件夹）
-		  
-		 
+10. 分支操作	  
+	* 创建某个分支   git branch  mybranch
+    * 切换到分支处   git checkout  mybranch
 		 
