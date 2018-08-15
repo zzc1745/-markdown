@@ -1,4 +1,31 @@
-### 一、VUE的数据绑定（原理）
+# 零、VUE的生命周期（过程）
+  ```
+  beforeCreate() {
+    alert("组件实例化之前执行的函数");
+  },
+  created() {
+    alert("组件实例化完成，但页面还未显示");
+  },
+  beroreMount() {
+    alert("组件挂载前，页面仍未展示，但虚拟Dom已经配置");
+  },
+  mounted() {
+    alert("组件挂载前，此方法执行后，页面显示");
+  },
+  beforeUpdate() {
+    alert("组件更新前，页面仍未更新，但虚拟Dom已经配置");
+  },
+  updated() {
+    alert("组件更新，此方法执行后，页面显示");
+  },
+  beforeDestroy() {
+    alert("组件销毁前");
+  },
+  destroyed() {
+    alert("组件已经销毁");
+  }
+  ```
+# 一、VUE的数据绑定（原理）
 
 **vue不支持IE8以下浏览器的原因：**把一个普通对象传给 Vue 实例作为它的 data 选项，Vue.js 将遍历它的属性，用 Object.defineProperty 将它们转为 getter/setter。这是 ES5 特性，不能打补丁实现 
 
@@ -22,7 +49,7 @@
 
  
 
-## 二、实现Observer过程
+# 二、实现Observer过程
 
 1.转化getter/setter
 
@@ -45,7 +72,7 @@
 
 
 
-## 三、基本架构的介绍
+# 三、基本架构的介绍
 
 ![1533018359660](C:\Users\Administrator\AppData\Local\Temp\1533018359660.png)
 
@@ -65,7 +92,7 @@
 
 
 
-## 四、基本组件的使用
+# 四、基本组件的使用
 
 
 
@@ -82,8 +109,7 @@ new Vue({
         relplace, //要不要用template取代el指向的DOM Element预设为ture
 })
 ```
-
-#### 这里说一下v-if和v-show的差别
+## 这里说一下v-if和v-show的差别
 
 `v-if`与`v-show`最大的差别在于对DOM的操作，v-if会依照条件决定是否将原件渲染至网页上，并决定时间于材料的监听是否要绑定至原件或直接销毁该原件。
 
@@ -91,7 +117,7 @@ new Vue({
 
 ![20170503003839750](C:\Users\Administrator\Desktop\20170503003839750.jpg)
 
-#### 这里在解释一下`method`和`component`以及`slot`
+## 这里在解释一下`method`和`component`以及`slot`
 
 `<b>methods:</b>`一次加载一个数据 
 `<b>component:</b>`一次加载多个数据,相当于属性的一个实时计算，如果实时计算里关联了对象，那么当某个值改变的时候，同时会发出实时计算。 
