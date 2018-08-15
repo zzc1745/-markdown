@@ -21,6 +21,13 @@
 	 index.html  （单个文件）
 	 \aaa        （文件夹）
 10. 分支操作	  
-	* 创建某个分支   git branch  mybranch
+	  * 创建某个分支   git branch  mybranch
     * 切换到分支处   git checkout  mybranch
+		* 在分支上操作，编写代码，不影响主线开发
+		* 分支合并到主线 git merge mybranch 记得要push
+		* 本地分支连接git仓库  
+	    git remote add origin https://github.com...
+			git remote
+		  git push -u origin master
+    
 		 
