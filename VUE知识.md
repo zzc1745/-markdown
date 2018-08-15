@@ -21,7 +21,7 @@
   beforeDestroy() {
     alert("组件销毁前");
   },
-  destroyed() {
+  destroyed() { 
     alert("组件已经销毁");
   }
   ```
