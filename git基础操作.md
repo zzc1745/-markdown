@@ -26,8 +26,8 @@
 		* 在分支上操作，编写代码，不影响主线开发
 		* 分支合并到主线 git merge mybranch 记得要push
 		* 本地分支连接git仓库  
-	    git remote add origin https://github.com...
+	    git remote add origin https://gitee.com/zzc1122/car_renting.git
 			git remote
 		  git push -u origin master
     
-		 
+    
